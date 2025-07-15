@@ -1,0 +1,5 @@
+#!/bin/bash
+ADDON_NAME=so-hb-devices-addon
+
+cp install_${ADDON_NAME} ../src/addon/
+cp uninstall_${ADDON_NAME} ../src/addon/

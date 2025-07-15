@@ -1,0 +1,16 @@
+﻿<AsksinPP_addon_generator_control>
+  <addon_name>so-hb-devices-addon</addon_name>
+  <addon_version>1.1</addon_version>
+  <creator>somikr</creator>
+  <creator_prefix>F6</creator_prefix>
+  <created_on>2025_07_11-20:45:22</created_on>
+  <generator_version>0.14</generator_version>
+  <devices>
+    <device id='HB-UNI-SENACT-4-4-SC' index='0' device_name='HB-UNI-SenAct-4-4-SC' device_model='0xf331' device_small_case_name='hb-UNI-SenAct-4-4-SC' rftypes_XML_version='not specified' VersionString='0.14'>
+      <device_description>4 actor channels with 4 binary state sensor channnels4 actor channels with 4 binary state sensor channnels, supporting AES</device_description>
+    </device>
+    <device id='HB-UNINODE-5O-4BI' index='1' device_name='HB-UniNode-5O-4BI' device_model='0xf601' device_small_case_name='hb-UniNode-5O-4BI' rftypes_XML_version='not specified' VersionString='0.14'>
+      <device_description>Universal 5 channel Actuator with 4 channel binary sensor input</device_description>
+    </device>
+  </devices>
+</AsksinPP_addon_generator_control>

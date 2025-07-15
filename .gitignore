@@ -1,0 +1,11 @@
+# Ignore all .log files
+*.log
+
+# Ignore the backups directory
+*-backups/
+
+# Ignore all zip files
+*.zip
+
+# Ignore directories with suffix _priv
+*_priv/
