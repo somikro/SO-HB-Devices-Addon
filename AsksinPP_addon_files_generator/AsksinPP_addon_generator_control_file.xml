@@ -1,16 +1,35 @@
 ﻿<AsksinPP_addon_generator_control>
   <addon_name>so-hb-devices-addon</addon_name>
   <addon_version>1.1</addon_version>
-  <creator>somikr</creator>
-  <creator_prefix>F6</creator_prefix>
-  <created_on>2025_07_11-20:45:22</created_on>
+  <creator>somikro</creator>
+  <creator_prefix>F7</creator_prefix>
+  <created_on>2025_07_17-16:13:42</created_on>
   <generator_version>0.14</generator_version>
   <devices>
     <device id='HB-UNI-SENACT-4-4-SC' index='0' device_name='HB-UNI-SenAct-4-4-SC' device_model='0xf331' device_small_case_name='hb-UNI-SenAct-4-4-SC' rftypes_XML_version='not specified' VersionString='0.14'>
-      <device_description>4 actor channels with 4 binary state sensor channnels4 actor channels with 4 binary state sensor channnels, supporting AES</device_description>
+      <device_description>4 actor channels with 4 binary state sensor channnels, supporting AES</device_description>
     </device>
-    <device id='HB-UNINODE-5O-4BI' index='1' device_name='HB-UniNode-5O-4BI' device_model='0xf601' device_small_case_name='hb-UniNode-5O-4BI' rftypes_XML_version='not specified' VersionString='0.14'>
+    <device id='HB-UNINODE-5O-4BI' index='1' device_name='HB-UniNode-5O-4BI' device_model='0xf701' device_small_case_name='hb-UniNode-5O-4BI' rftypes_XML_version='not specified' VersionString='0.14'>
       <device_description>Universal 5 channel Actuator with 4 channel binary sensor input</device_description>
     </device>
+    <device id='HB-UNINODE-5O-4BI-1AI' index='2' device_name='HB-UniNode-5O-4BI-1AI' device_model='0xf711' device_small_case_name='hb-UniNode-5O-4BI-1AI' rftypes_XML_version='not specified' VersionString='0.14'>
+      <device_description>Universal 5 channel Actuator with 4 channel binary sensor input and 1 analog sensor input</device_description>
+    </device>
   </devices>
+  <channels>
+    <channel type='SHUTTER_CONTACT'>
+      <parameter id='ERROR' index='3' paramset_type='VALUES' paramset_id='sc_ch_values' channel='SHUTTER_CONTACT'>
+        <skip_channel_prefix>no</skip_channel_prefix>
+        <stringtable_identifier>stringTableHB_F7_ERROR</stringtable_identifier>
+        <translation_de>tbd</translation_de>
+        <translation_en>tbd</translation_en>
+      </parameter>
+      <parameter id='ERROR=NO_ERROR' index='4' paramset_type='VALUES' paramset_id='sc_ch_values' channel='SHUTTER_CONTACT'>
+        <skip_channel_prefix>no</skip_channel_prefix>
+        <stringtable_identifier>stringTableHB_F7_ERROR_NO_ERROR</stringtable_identifier>
+        <translation_de>tbd</translation_de>
+        <translation_en>tbd</translation_en>
+      </parameter>
+    </channel>
+  </channels>
 </AsksinPP_addon_generator_control>
