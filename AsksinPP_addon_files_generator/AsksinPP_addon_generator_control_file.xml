@@ -1,34 +1,145 @@
 ﻿<AsksinPP_addon_generator_control>
   <addon_name>so-hb-devices-addon</addon_name>
-  <addon_version>1.1</addon_version>
+  <addon_version>1.4</addon_version>
   <creator>somikro</creator>
   <creator_prefix>F7</creator_prefix>
-  <created_on>2025_07_17-16:13:42</created_on>
+  <created_on>2026_08_17-15:46:47</created_on>
   <generator_version>0.14</generator_version>
   <devices>
-    <device id='HB-UNI-SENACT-4-4-SC' index='0' device_name='HB-UNI-SenAct-4-4-SC' device_model='0xf331' device_small_case_name='hb-UNI-SenAct-4-4-SC' rftypes_XML_version='not specified' VersionString='0.14'>
+    <device id='HB-UNI-SENSOR-THPD-BME280' index='0' device_name='HB-UNI-Sensor-THPD-BME280' device_model='0xF604' device_small_case_name='hb-uni-sensor-THPD-BME280' rftypes_XML_version='0x10' VersionString='0.14'>
+      <device_description>Sensor THPD</device_description>
+    </device>
+    <device id='HB-UNI-SENACT-4-4-SC' index='1' device_name='HB-UNI-SenAct-4-4-SC' device_model='0xf331' device_small_case_name='hb-UNI-SenAct-4-4-SC' rftypes_XML_version='not specified' VersionString='0.14'>
       <device_description>4 actor channels with 4 binary state sensor channnels, supporting AES</device_description>
     </device>
-    <device id='HB-UNINODE-5O-4BI' index='1' device_name='HB-UniNode-5O-4BI' device_model='0xf701' device_small_case_name='hb-UniNode-5O-4BI' rftypes_XML_version='not specified' VersionString='0.14'>
-      <device_description>Universal 5 channel Actuator with 4 channel binary sensor input</device_description>
+    <device id='HB-UNINODE-TESTING-3CHW' index='2' device_name='HB-UniNode-Testing-3CHW' device_model='0xf751' device_small_case_name='hb-UniNode-Testing-3CHW' rftypes_XML_version='not specified' VersionString='0.14'>
+      <device_description>Universal 5 channel Actuator  in Testing Channels</device_description>
     </device>
-    <device id='HB-UNINODE-5O-4BI-1AI' index='2' device_name='HB-UniNode-5O-4BI-1AI' device_model='0xf711' device_small_case_name='hb-UniNode-5O-4BI-1AI' rftypes_XML_version='not specified' VersionString='0.14'>
+    <device id='HB-UNINODE-5O-4BI' index='3' device_name='HB-UniNode-5O-4BI' device_model='0xf701' device_small_case_name='hb-UniNode-5O-4BI' rftypes_XML_version='not specified' VersionString='0.14'>
+      <device_description>Universal 5 channel Actuator with 4 channel binary sensor input - production ready</device_description>
+    </device>
+    <device id='HB-UNINODE-5O-4BI-1AI' index='4' device_name='HB-UniNode-5O-4BI-1AI' device_model='0xf711' device_small_case_name='hb-UniNode-5O-4BI-1AI' rftypes_XML_version='not specified' VersionString='0.14'>
       <device_description>Universal 5 channel Actuator with 4 channel binary sensor input and 1 analog sensor input</device_description>
     </device>
   </devices>
+  <paramset>
+    <parameter id='TRANSMIT_TIME_INTERVAL' index='5' paramset_type='MASTER' paramset_id='HB-UNI-Sensor-THPD-BME280_dev_master'>
+      <stringtable_identifier>stringTableHB_F6_TRANSMIT_TIME_INTERVAL</stringtable_identifier>
+      <translation_de>Sendeintervall</translation_de>
+      <translation_en>transmit time interval</translation_en>
+    </parameter>
+    <parameter id='ALTITUDE_ABOVE_SEA_LEVEL' index='6' paramset_type='MASTER' paramset_id='HB-UNI-Sensor-THPD-BME280_dev_master'>
+      <stringtable_identifier>stringTableHB_F6_ALTITUDE_ABOVE_SEA_LEVEL</stringtable_identifier>
+      <translation_de>Höhe über NN</translation_de>
+      <translation_en>altitude above sea level</translation_en>
+    </parameter>
+    <parameter id='RF_TX_POWER' index='7' paramset_type='MASTER' paramset_id='HB-UNI-Sensor-THPD-BME280_dev_master'>
+      <stringtable_identifier>stringTableHB_F6_RF_TX_POWER</stringtable_identifier>
+      <translation_de>HF Sendeleistung</translation_de>
+      <translation_en>RF transmission power</translation_en>
+    </parameter>
+    <parameter id='RF_TX_POWER=TX_MINUS_30DB' index='8' paramset_type='MASTER' paramset_id='HB-UNI-Sensor-THPD-BME280_dev_master'>
+      <stringtable_identifier>stringTableHB_F6_RF_TX_POWER_TX_MINUS_30DB</stringtable_identifier>
+      <translation_de>minimal (-30dBm)</translation_de>
+      <translation_en>minimum (-30dBm)</translation_en>
+    </parameter>
+    <parameter id='RF_TX_POWER=TX_MINUS_20DB' index='9' paramset_type='MASTER' paramset_id='HB-UNI-Sensor-THPD-BME280_dev_master'>
+      <stringtable_identifier>stringTableHB_F6_RF_TX_POWER_TX_MINUS_20DB</stringtable_identifier>
+      <translation_de>extrem gering (-20dBm)</translation_de>
+      <translation_en>extreme low (-20dBm)</translation_en>
+    </parameter>
+    <parameter id='RF_TX_POWER=TX_MINUS_15DB' index='10' paramset_type='MASTER' paramset_id='HB-UNI-Sensor-THPD-BME280_dev_master'>
+      <stringtable_identifier>stringTableHB_F6_RF_TX_POWER_TX_MINUS_15DB</stringtable_identifier>
+      <translation_de>sehr gering (-15dBm)</translation_de>
+      <translation_en>very low (-15dBm)</translation_en>
+    </parameter>
+    <parameter id='RF_TX_POWER=TX_MINUS_10DB' index='11' paramset_type='MASTER' paramset_id='HB-UNI-Sensor-THPD-BME280_dev_master'>
+      <stringtable_identifier>stringTableHB_F6_RF_TX_POWER_TX_MINUS_10DB</stringtable_identifier>
+      <translation_de>gering (-10dBm)</translation_de>
+      <translation_en>low (-10dBm)</translation_en>
+    </parameter>
+    <parameter id='RF_TX_POWER=TX_0DB' index='12' paramset_type='MASTER' paramset_id='HB-UNI-Sensor-THPD-BME280_dev_master'>
+      <stringtable_identifier>stringTableHB_F6_RF_TX_POWER_TX_0DB</stringtable_identifier>
+      <translation_de>normal (0dBm)</translation_de>
+      <translation_en>normal (0dBm)</translation_en>
+    </parameter>
+    <parameter id='RF_TX_POWER=TX_PLUS_5DB' index='13' paramset_type='MASTER' paramset_id='HB-UNI-Sensor-THPD-BME280_dev_master'>
+      <stringtable_identifier>stringTableHB_F6_RF_TX_POWER_TX_PLUS_5DB</stringtable_identifier>
+      <translation_de>hoch (+5dBm)</translation_de>
+      <translation_en>high (+5dBm)</translation_en>
+    </parameter>
+    <parameter id='RF_TX_POWER=TX_PLUS_7DB' index='14' paramset_type='MASTER' paramset_id='HB-UNI-Sensor-THPD-BME280_dev_master'>
+      <stringtable_identifier>stringTableHB_F6_RF_TX_POWER_TX_PLUS_7DB</stringtable_identifier>
+      <translation_de>sehr hoch (+7dBm)</translation_de>
+      <translation_en>very high (+7dBm)</translation_en>
+    </parameter>
+    <parameter id='RF_TX_POWER=TX_PLUS_10DB' index='15' paramset_type='MASTER' paramset_id='HB-UNI-Sensor-THPD-BME280_dev_master'>
+      <stringtable_identifier>stringTableHB_F6_RF_TX_POWER_TX_PLUS_10DB</stringtable_identifier>
+      <translation_de>maximal (+10dBm)</translation_de>
+      <translation_en>maximum (+10dBm)</translation_en>
+    </parameter>
+  </paramset>
   <channels>
-    <channel type='SHUTTER_CONTACT'>
-      <parameter id='ERROR' index='3' paramset_type='VALUES' paramset_id='sc_ch_values' channel='SHUTTER_CONTACT'>
+    <channel type='WEATHER'>
+      <parameter id='TemperatureOffset' index='16' paramset_type='MASTER' paramset_id='HB-UNI-Sensor-THPD-BME280_master' channel='WEATHER'>
         <skip_channel_prefix>no</skip_channel_prefix>
-        <stringtable_identifier>stringTableHB_F7_ERROR</stringtable_identifier>
-        <translation_de>tbd</translation_de>
-        <translation_en>tbd</translation_en>
+        <stringtable_identifier>stringTableHB_F6_TemperatureOffset</stringtable_identifier>
+        <translation_de>Temperaturoffset</translation_de>
+        <translation_en>temperature offset</translation_en>
       </parameter>
-      <parameter id='ERROR=NO_ERROR' index='4' paramset_type='VALUES' paramset_id='sc_ch_values' channel='SHUTTER_CONTACT'>
+      <parameter id='HumidityOffset' index='17' paramset_type='MASTER' paramset_id='HB-UNI-Sensor-THPD-BME280_master' channel='WEATHER'>
         <skip_channel_prefix>no</skip_channel_prefix>
-        <stringtable_identifier>stringTableHB_F7_ERROR_NO_ERROR</stringtable_identifier>
-        <translation_de>tbd</translation_de>
-        <translation_en>tbd</translation_en>
+        <stringtable_identifier>stringTableHB_F6_HumidityOffset</stringtable_identifier>
+        <translation_de>Luftfeuchtigkeitsoffset</translation_de>
+        <translation_en>humidity offset</translation_en>
+      </parameter>
+      <parameter id='PressureOffset' index='18' paramset_type='MASTER' paramset_id='HB-UNI-Sensor-THPD-BME280_master' channel='WEATHER'>
+        <skip_channel_prefix>no</skip_channel_prefix>
+        <stringtable_identifier>stringTableHB_F6_PressureOffset</stringtable_identifier>
+        <translation_de>Luftdruckoffset</translation_de>
+        <translation_en>pressure offset</translation_en>
+      </parameter>
+      <parameter id='MY_HUMIDITY' index='19' paramset_type='VALUES' paramset_id='HB-UNI-Sensor-THPD-BME280_values' channel='WEATHER'>
+        <skip_channel_prefix>no</skip_channel_prefix>
+        <stringtable_identifier>stringTableHB_F6_MY_HUMIDITY</stringtable_identifier>
+        <translation_de>Rel. Luftfeuchtigkeit</translation_de>
+        <translation_en>rel. humidity</translation_en>
+      </parameter>
+      <parameter id='AIR_PRESSURE' index='20' paramset_type='VALUES' paramset_id='HB-UNI-Sensor-THPD-BME280_values' channel='WEATHER'>
+        <skip_channel_prefix>no</skip_channel_prefix>
+        <stringtable_identifier>stringTableHB_F6_AIR_PRESSURE</stringtable_identifier>
+        <translation_de>Luftdruck</translation_de>
+        <translation_en>air pressure</translation_en>
+      </parameter>
+      <parameter id='DEWPOINT' index='21' paramset_type='VALUES' paramset_id='HB-UNI-Sensor-THPD-BME280_values' channel='WEATHER'>
+        <skip_channel_prefix>no</skip_channel_prefix>
+        <stringtable_identifier>stringTableHB_F6_DEWPOINT</stringtable_identifier>
+        <translation_de>Taupunkttemperatur</translation_de>
+        <translation_en>dewpoint</translation_en>
+      </parameter>
+      <parameter id='VAPOR_CONCENTRATION' index='22' paramset_type='VALUES' paramset_id='HB-UNI-Sensor-THPD-BME280_values' channel='WEATHER'>
+        <skip_channel_prefix>no</skip_channel_prefix>
+        <stringtable_identifier>stringTableHB_F6_VAPOR_CONCENTRATION</stringtable_identifier>
+        <translation_de>absolute Luftfeuchte</translation_de>
+        <translation_en>vapor concentration</translation_en>
+      </parameter>
+      <parameter id='CHMEAS1' index='23' paramset_type='VALUES' paramset_id='HB-UniNode-Testing_values' channel='WEATHER'>
+        <skip_channel_prefix>no</skip_channel_prefix>
+        <stringtable_identifier>stringTableHB_F7_CHMEAS1</stringtable_identifier>
+        <translation_de>MessKanal1</translation_de>
+        <translation_en>CHMEAS1</translation_en>
+      </parameter>
+      <parameter id='CHMEAS2' index='24' paramset_type='VALUES' paramset_id='HB-UniNode-Testing_values' channel='WEATHER'>
+        <skip_channel_prefix>no</skip_channel_prefix>
+        <stringtable_identifier>stringTableHB_F7_CHMEAS2</stringtable_identifier>
+        <translation_de>MessKanal2</translation_de>
+        <translation_en>CHMEAS2</translation_en>
+      </parameter>
+      <parameter id='OPERATING_VOLTAGE' index='25' paramset_type='VALUES' paramset_id='HB-UniNode-Testing_values' channel='WEATHER'>
+        <skip_channel_prefix>no</skip_channel_prefix>
+        <stringtable_identifier>stringTableHB_F7_OPERATING_VOLTAGE</stringtable_identifier>
+        <translation_de>Betriebsspannung</translation_de>
+        <translation_en>Operating Voltage</translation_en>
       </parameter>
     </channel>
   </channels>

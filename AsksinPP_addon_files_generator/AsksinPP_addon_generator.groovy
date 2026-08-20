@@ -255,7 +255,6 @@ class Addon_generator {
         isf.append "#------------------------------------------------------------------------------\n"
         isf.append "#------------------------------------------------------------------------------\n\n"
         
-        
         AsksinPP_addon_control_file.devices.device.each {
         
           println "\n.. working on device '${it.@id}' ..\n\n"
@@ -316,8 +315,6 @@ class Addon_generator {
         isf.append "#------------------------------------------------------------------------------\n\n\n"
 
         isf.append "webuiSearchBegin=\"elvST[[:space:]]*=[[:space:]]*new Array();\"\n\n"
-
-
         
         webuiInsert_buffer.append( "\n\n\n### Edit webuiInsert ####\n\n" )
         

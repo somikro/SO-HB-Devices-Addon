@@ -1,0 +1,76 @@
+#! /bin/sh
+#
+# edit_en_translation
+#
+# install oder uninstall strings for english translation from /www/webui/js/lang/en/translate.lang.stringtable.js
+
+case "$1" in
+    install)
+		translate_enFile="/www/webui/js/lang/en/translate.lang.stringtable.js"
+		translate_enSearch="\"dummy\" : \"\","
+
+
+
+		#  parameter id #6: 'WEATHER|CHMEAS1' paramset 'VALUES' 'HB-UniNode-Testing_values' channel 'WEATHER' 
+
+		translate_enInsert="\n    \"stringTableHB_F7_CHMEAS1\" : \"Measurement_1\","
+		if [ -z "`cat $translate_enFile | grep \"stringTableHB_F7_CHMEAS1\"`" ]; then
+			  sed -i "s/\($translate_enSearch\)/\1$translate_enInsert/g" $translate_enFile
+		fi
+
+
+
+		#  parameter id #7: 'WEATHER|CHMEAS2' paramset 'VALUES' 'HB-UniNode-Testing_values' channel 'WEATHER' 
+
+		translate_enInsert="\n    \"stringTableHB_F7_CHMEAS2\" : \"Measurement_2\","
+		if [ -z "`cat $translate_enFile | grep \"stringTableHB_F7_CHMEAS2\"`" ]; then
+			  sed -i "s/\($translate_enSearch\)/\1$translate_enInsert/g" $translate_enFile
+		fi
+
+
+
+		#  parameter id #8: 'WEATHER|OPERATING_VOLTAGE' paramset 'VALUES' 'HB-UniNode-Testing_values' channel 'WEATHER' 
+
+		translate_enInsert="\n    \"stringTableHB_F7_OPERATING_VOLTAGE\" : \"Operating Voltage\","
+		if [ -z "`cat $translate_enFile | grep \"stringTableHB_F7_OPERATING_VOLTAGE\"`" ]; then
+			  sed -i "s/\($translate_enSearch\)/\1$translate_enInsert/g" $translate_enFile
+		fi
+		;;
+    uninstall)
+	
+		### Undo changes of translate.lang.stringtable.js ###
+
+		translate_enFile="/www/webui/js/lang/en/translate.lang.stringtable.js"
+
+
+		# parameter id #4: 'SHUTTER_CONTACT|ERROR' paramset 'VALUES' 'sc_ch_values' channel 'SHUTTER_CONTACT' 
+
+		translate_enSearch="stringTableHB_F7_ERROR"
+		sed -i "/\(${translate_enSearch}\)/d" $translate_enFile
+
+
+		# parameter id #5: 'SHUTTER_CONTACT|ERROR=NO_ERROR' paramset 'VALUES' 'sc_ch_values' channel 'SHUTTER_CONTACT' 
+
+		translate_enSearch="stringTableHB_F7_ERROR_NO_ERROR"
+		sed -i "/\(${translate_enSearch}\)/d" $translate_enFile
+
+
+		# parameter id #6: 'WEATHER|CHMEAS1' paramset 'VALUES' 'HB-UniNode-Testing_values' channel 'WEATHER' 
+
+		translate_enSearch="stringTableHB_F7_CHMEAS1"
+		sed -i "/\(${translate_enSearch}\)/d" $translate_enFile
+
+
+		# parameter id #7: 'WEATHER|CHMEAS2' paramset 'VALUES' 'HB-UniNode-Testing_values' channel 'WEATHER' 
+
+		translate_enSearch="stringTableHB_F7_CHMEAS2"
+		sed -i "/\(${translate_enSearch}\)/d" $translate_enFile
+
+
+		# parameter id #8: 'WEATHER|OPERATING_VOLTAGE' paramset 'VALUES' 'HB-UniNode-Testing_values' channel 'WEATHER' 
+
+		translate_enSearch="stringTableHB_F7_OPERATING_VOLTAGE"
+		sed -i "/\(${translate_enSearch}\)/d" $translate_enFile	
+
+	;;
+esac

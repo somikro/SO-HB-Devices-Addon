@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# latest checked occu version: 3.83.6 by somikro 2025-07-20
+# 
+
 # latest checked occu version: https://github.com/eq-3/occu/commit/a420be85d65df323a6c94efc5b132dbe9a2e3f24  version 3.69.7
 # validated with Kubuntu 22.04
 
